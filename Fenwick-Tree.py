@@ -36,7 +36,7 @@ def lower_bound(v):
     return x + 1
 
 
-# k番目の数
+# k番目の数を求める場合
 # 追加
 q = [1, 2, 4, 7, 2, 3, 5, 7, 8, 3]
 for i in q:
