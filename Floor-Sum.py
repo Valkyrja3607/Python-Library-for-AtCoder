@@ -1,17 +1,17 @@
 # Floor-Sum
 # https://atcoder.jp/contests/practice2/submissions/16749655
-def Floor_sum(N, M, A, B):
-    ANS = 0
-    if A >= M:
-        ANS += N * (N - 1) // 2 * (A // M)
-        A %= M
-    if B >= M:
-        ANS += B // M * N
-        B %= M
-    y_max = (A * N + B) // M
-    x_max_divA = y_max * M - B
+def Floor_sum(n, m, a, b):
+    ans = 0
+    if a >= m:
+        ans += n * (n - 1) // 2 * (a // m)
+        a %= m
+    if b >= m:
+        ans += b // m * n
+        b %= m
+    y_max = (a * n + b) // m
+    x_max_divA = y_max * m - b
     if y_max == 0:
-        return ANS
+        return ans
     else:
-        ANS += Floor_sum(y_max, A, M, A * N - x_max_divA)
-        return ANS
+        ans += Floor_sum(y_max, a, m, a * n - x_max_divA)
+        return ans
