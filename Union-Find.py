@@ -24,4 +24,3 @@ def connect(a, b):
     par[a] += par[b]
     par[b] = a
     return True
-
